@@ -1,7 +1,6 @@
 package fairandsquare
 
 import java.io.PrintWriter
-
 import scala.annotation.tailrec
 import scala.io.Source
 
@@ -88,14 +87,16 @@ object FairAndSquare {
    * @param space 가능한 여백
    * @param nLim  1의 최대 갯수
    */
-  def combisSeq(space: Int, nLim: Int): Seq[Seq[Int]] = (0 to nLim).flatMap(n => (0 until space).combinations(n).toSeq)
+  def combisSeq(space: Int, nLim: Int): Seq[Seq[Int]] =
+    (0 to nLim).flatMap(n => (0 until space).combinations(n).toSeq)
 
   /**
    * @param str 매핑된 padding
    * @param last 마지막에 붙는 숫자 1 또는 2
    * @param center 자리수가 홀수인 경우 가운데 들어오는 숫자 1 또는 2
    */
-  def buildPalin(str: String, last: String = "1", center: String = "") = (last + str.reverse) + center + (str + last)
+  def buildPalin(str: String, last: String = "1", center: String = "") =
+    (last + str.reverse) + center + (str + last)
 
   /**
    * @param builder 특성을 구분짓는 함수
