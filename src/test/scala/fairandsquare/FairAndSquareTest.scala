@@ -1,4 +1,4 @@
-package codejam.fairandscala
+package fairandsquare
 
 import org.scalatest.FunSuite
 import org.scalatest.Matchers
